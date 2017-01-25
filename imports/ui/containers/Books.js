@@ -7,8 +7,7 @@ export default createContainer((props) => {
   const subscription = Meteor.subscribe('books');
 
   return {
-    loading: !subscription.ready(),
-    firstName: 'Gabe',
+    firstName: 'Alaina',
     readBooks: BooksCollection.find({ read: true }).fetch(),
     unreadBooks: BooksCollection.find({ read: false }).fetch(),
   };
